@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ford CBO - Maasai Community Empowerment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --maasai-red: #C82D1F;
+            --maasai-blue: #0066CC;
+            --maasai-yellow: #FFCC00;
+            --maasai-green: #2E8B57;
+            --earth-brown: #8B4513;
+            --light-beige: #F5F5DC;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518834103328-93d45986dce1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid var(--maasai-red);
+        }
+        
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--maasai-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background: white;
+            color: var(--maasai-red);
+            transform: translateY(-3px);
+        }
+        
+        nav {
+            padding-top: 15px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--maasai-yellow);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--maasai-yellow);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--maasai-red);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            border: 2px solid var(--maasai-red);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--maasai-yellow);
+            border-color: var(--maasai-yellow);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Main Content Styles */
+        main {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--maasai-red);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: var(--maasai-yellow);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Basic Information Section */
+        .basic-info {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--maasai-red);
+        }
+        
+        .vision-mission {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .vision-box, .mission-box {
+            padding: 30px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .vision-box {
+            border-left: 5px solid var(--maasai-blue);
+        }
+        
+        .mission-box {
+            border-left: 5px solid var(--maasai-green);
+        }
+        
+        .vision-box h3, .mission-box h3 {
+            color: var(--earth-brown);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            color: var(--earth-brown);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .value-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--maasai-red);
+            transition: transform 0.3s;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--maasai-red);
+            margin-bottom: 15px;
+        }
+        
+        .legal-status {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid var(--maasai-green);
+        }
+        
+        .legal-status h4 {
+            color: var(--maasai-green);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--maasai-red);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--maasai-red);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: var(--earth-brown);
+            font-weight: 600;
+        }
+        
+        /* Programs and Services */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .program-img {
+            height: 200px;
+            background: var(--light-beige);
+            overflow: hidden;
+        }
+        
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .program-card:hover .program-img img {
+            transform: scale(1.1);
+        }
+        
+        .program-content {
+            padding: 25px;
+        }
+        
+        .program-content h3 {
+            color: var(--maasai-blue);
+            margin-bottom: 15px;
+        }
+        
+        .program-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .program-cost {
+            background: var(--maasai-green);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .program-active {
+            background: var(--maasai-blue);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-photo {
+            height: 200px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h4 {
+            color: var(--maasai-blue);
+            margin-bottom: 5px;
+        }
+        
+        .member-role {
+            color: var(--maasai-red);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--maasai-red);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--maasai-blue) 0%, var(--maasai-green) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            background: white;
+            color: var(--maasai-blue);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cta-btn:hover {
+            background: var(--maasai-red);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Volunteer Registration */
+        .volunteer-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        /* Partners Section */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .partner-logo {
+            height: 120px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Media Gallery */
+        .media-gallery {
+            margin-top: 40px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .gallery-item .file-icon {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+        
+        .gallery-item .file-icon i {
+            font-size: 4rem;
+            color: var(--maasai-blue);
+        }
+        
+        /* Transparency Section */
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .document-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .document-card:hover {
+            border-color: var(--maasai-yellow);
+            transform: translateY(-5px);
+        }
+        
+        .doc-icon {
+            font-size: 3rem;
+            color: var(--maasai-red);
+            margin-bottom: 15px;
+        }
+        
+        .doc-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        /* Donation Section */
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .donation-option {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .donation-option:hover {
+            border-color: var(--maasai-yellow);
+            transform: translateY(-5px);
+        }
+        
+        .donation-amount {
+            font-size: 2rem;
+            color: var(--maasai-red);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .donation-desc {
+            color: #666;
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+        
+        .donate-btn {
+            background: var(--maasai-green);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .donate-btn:hover {
+            background: var(--maasai-blue);
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--maasai-red);
+        }
+        
+        .admin-panel h3 {
+            color: var(--maasai-red);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .admin-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .admin-btn {
+            background: var(--maasai-blue);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background 0.3s;
+        }
+        
+        .admin-btn:hover {
+            background: var(--maasai-red);
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--maasai-yellow);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            animation: modalFade 0.3s;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        @keyframes modalFade {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .modal h3 {
+            color: var(--maasai-red);
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .form-control, select.form-control, textarea.form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .file-input-container {
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .file-input-container:hover {
+            border-color: var(--maasai-blue);
+            background: rgba(0, 102, 204, 0.05);
+        }
+        
+        .file-input-container.drag-over {
+            border-color: var(--maasai-green);
+            background: rgba(46, 139, 87, 0.1);
+        }
+        
+        .file-preview {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .file-preview.show {
+            display: block;
+        }
+        
+        .file-preview-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .payment-options {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .payment-option {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-option.selected {
+            border-color: var(--maasai-green);
+            background: rgba(46, 139, 87, 0.1);
+        }
+        
+        .payment-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--maasai-blue);
+        }
+        
+        .submit-btn {
+            background: var(--maasai-green);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: var(--maasai-blue);
+        }
+        
+        .security-badge {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .security-badge i {
+            color: var(--maasai-green);
+            margin-right: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-img" id="logoContainer">
+                        <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--maasai-red);"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 id="orgName">New Ford CBO</h1>
+                        <p id="orgTagline">Maasai Community Empowerment | Loita, Narok South</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/254745956794" target="_blank" class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:newfordorgnarok@mail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#basic">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#transparency">Transparency</a></li>
+                    <li><a href="#volunteer">Volunteer</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hero">
+                <h2 id="heroTitle">Empowering Maasai Communities in Loita</h2>
+                <p id="heroDescription">We are a community-driven organization working to break the cycle of poverty through education, women's empowerment, and sustainable development in Maasai land.</p>
+                <a href="#donate" class="cta-button">Support Our Mission</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Basic Information Section -->
+        <section id="basic" class="basic-info">
+            <div class="section-title">
+                <h2>Our Organization</h2>
+            </div>
+            
+            <div class="vision-mission">
+                <div class="vision-box">
+                    <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                    <p id="visionText">To create a self-sustaining Maasai community where every individual has access to education, economic opportunities, and cultural preservation, leading to improved quality of life and sustainable development.</p>
+                </div>
+                
+                <div class="mission-box">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p id="missionText">To empower the Maasai community of Loita through holistic interventions in education, women's empowerment, infrastructure development, and economic sustainability while preserving our rich cultural heritage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-title">
+                <h2>About New Ford CBO</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p id="aboutText">New Ford CBO is a grassroots community-based organization founded and led by members of the Maasai community in Loita, Narok South. Registered and operating under Kenyan law, we serve as the last line of defense for our community after the departure of larger NGOs from our region.</p>
+                    
+                    <div class="legal-status">
+                        <h4><i class="fas fa-file-contract"></i> Legal Status</h4>
+                        <p><strong>Registration Number:</strong> DSD/33/179/02/20645</p>
+                        <p><strong>Date of Registration:</strong> 20th July, 2024</p>
+                        <p><strong>Operating Area:</strong> Loita Division, Narok South Sub-County, Kenya</p>
+                        <p><strong>Status:</strong> Fully Registered Community-Based Organization</p>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3>Our Core Values</h3>
+                    <div id="valuesContainer" class="values-grid">
+                        <!-- Values will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="statsContainer" class="stats-grid">
+                <!-- Stats will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Programs and Services -->
+        <section id="programs" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Our Programs & Services</h2>
+            </div>
+            
+            <div id="programsContainer" class="programs-grid">
+                <!-- Programs will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Media Gallery -->
+        <section id="gallery" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Media Gallery</h2>
+            </div>
+            
+            <!-- Text above all photos -->
+            <div id="galleryDescription" style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; color: #555; padding: 0 20px;">
+                <p>Explore photos and videos from our community projects, events, and daily life in Loita. These images showcase the impact of our work and the beauty of Maasai culture.</p>
+            </div>
+            
+            <div class="media-gallery">
+                <div id="galleryContainer" class="gallery-grid">
+                    <!-- Gallery items will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Team and Leadership -->
+        <section id="team" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Our Leadership Team</h2>
+            </div>
+            
+            <div id="teamContainer" class="team-grid">
+                <!-- Team members will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Transparency and Credibility -->
+        <section id="transparency" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Transparency & Accountability</h2>
+            </div>
+            
+            <div id="documentsContainer" class="documents-grid">
+                <!-- Documents will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Volunteer Registration -->
+        <section id="volunteer" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Become a Volunteer</h2>
+            </div>
+            
+            <div class="volunteer-form">
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
+                    Join our team of dedicated volunteers and make a difference in the Maasai community. 
+                    You'll receive regular updates and notifications about volunteer opportunities.
+                </p>
+                
+                <form id="volunteerRegistrationForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <div class="form-group">
+                            <label for="volunteerFirstName">First Name *</label>
+                            <input type="text" id="volunteerFirstName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="volunteerLastName">Last Name *</label>
+                            <input type="text" id="volunteerLastName" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="volunteerEmail">Email Address *</label>
+                        <input type="email" id="volunteerEmail" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="volunteerPhone">Phone Number</label>
+                        <input type="tel" id="volunteerPhone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="volunteerSkills">Skills & Expertise</label>
+                        <textarea id="volunteerSkills" class="form-control" rows="3" placeholder="Tell us about your skills, experience, or how you'd like to help"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="volunteerAvailability">Availability</label>
+                        <select id="volunteerAvailability" class="form-control">
+                            <option value="">Select availability</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="weekends">Weekends only</option>
+                            <option value="remote">Remote/Online</option>
+                            <option value="seasonal">Seasonal/Project-based</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="newsletterOptIn" checked>
+                            Send me updates and notifications about volunteer opportunities
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-user-plus"></i> Register as Volunteer
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2 style="color: white; margin-bottom: 20px;">Join Us in Making a Difference</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Your support can transform lives in the Maasai community. Choose how you'd like to contribute:</p>
+            
+            <div class="cta-buttons">
+                <a href="#donate" class="cta-btn">
+                    <i class="fas fa-hand-holding-heart"></i> Donate Now
+                </a>
+                <a href="#volunteer" class="cta-btn">
+                    <i class="fas fa-hands-helping"></i> Volunteer
+                </a>
+                <a href="#contact" class="cta-btn">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+                <a href="#partners" class="cta-btn">
+                    <i class="fas fa-handshake"></i> Partner With Us
+                </a>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Our Partners & Supporters</h2>
+            </div>
+            
+            <div id="partnersContainer" class="partners-grid">
+                <!-- Partners will be loaded here -->
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; color: #666;">
+                We welcome new partnerships with organizations that share our vision for community empowerment.
+                <a href="mailto:newfordorgnarok@mail.com" style="color: var(--maasai-red); font-weight: bold;">Contact us to partner</a>
+            </p>
+        </section>
+
+        <!-- Donation Section -->
+        <section id="donate" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Support Our Maasai Community</h2>
+            </div>
+            
+            <div id="donationsContainer" class="donation-options">
+                <!-- Donation options will be loaded here -->
+            </div>
+            
+            <!-- Admin Panel (Hidden by default, can be shown with password) -->
+            <div class="admin-panel" id="adminPanel" style="display: none;">
+                <h3><i class="fas fa-lock"></i> Admin Content Management System</h3>
+                <div class="admin-controls">
+                    <button class="admin-btn" onclick="openModal('updateTextContent')">
+                        <i class="fas fa-edit"></i> Edit Text Content
+                    </button>
+                    <button class="admin-btn" onclick="openModal('uploadMedia')">
+                        <i class="fas fa-upload"></i> Upload Media Files
+                    </button>
+                    <button class="admin-btn" onclick="openModal('manageTeam')">
+                        <i class="fas fa-users"></i> Manage Team
+                    </button>
+                    <button class="admin-btn" onclick="openModal('managePrograms')">
+                        <i class="fas fa-tasks"></i> Manage Programs
+                    </button>
+                    <button class="admin-btn" onclick="openModal('managePartners')">
+                        <i class="fas fa-handshake"></i> Manage Partners
+                    </button>
+                    <button class="admin-btn" onclick="openModal('manageDocuments')">
+                        <i class="fas fa-file-alt"></i> Manage Documents
+                    </button>
+                    <button class="admin-btn" onclick="openModal('viewVolunteers')">
+                        <i class="fas fa-user-friends"></i> View Volunteers
+                    </button>
+                    <button class="admin-btn" onclick="openModal('donationSettings')">
+                        <i class="fas fa-cog"></i> Donation Settings
+                    </button>
+                </div>
+                <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4><i class="fas fa-database"></i> Storage Status</h4>
+                    <div style="margin-top: 10px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Images: <span id="imageCount">0</span> files</span>
+                            <span id="imageSize">0 MB</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Documents: <span id="docCount">0</span> files</span>
+                            <span id="docSize">0 MB</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Videos: <span id="videoCount">0</span> files</span>
+                            <span id="videoSize">0 MB</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Other: <span id="otherCount">0</span> files</span>
+                            <span id="otherSize">0 MB</span>
+                        </div>
+                        <div style="height: 10px; background: #ddd; border-radius: 5px; margin-top: 10px; overflow: hidden;">
+                            <div id="storageBar" style="height: 100%; background: var(--maasai-green); width: 0%; transition: width 0.3s;"></div>
+                        </div>
+                        <div style="text-align: center; margin-top: 5px; font-size: 0.8rem; color: #666;">
+                            <span id="storageUsed">0 MB</span> of <span id="storageTotal">50 MB</span> used
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">
+                    <i class="fas fa-shield-alt"></i> Secure admin panel - All data is stored locally in your browser
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button id="adminAccessBtn" style="background: transparent; border: 1px dashed #ccc; padding: 10px 20px; border-radius: 5px; color: #666; cursor: pointer;">
+                    <i class="fas fa-user-shield"></i> Admin Access
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" style="margin-top: 80px;">
+            <div class="section-title">
+                <h2>Contact Our Maasai Team</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="color: var(--maasai-blue); margin-bottom: 25px;">Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p id="locationText">Loita, Narok South, Kenya</p>
+                            <p>We serve the Maasai community across the Loita plains and surrounding areas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Addresses</h4>
+                            <p id="email1">newfordorgnarok@mail.com</p>
+                            <p id="email2">Danielnkai201@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Numbers</h4>
+                            <p id="phone1">Chairperson: +254-745956794</p>
+                            <p id="phone2">Programs: +254-791474672</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div>
+                            <h4>Bank Details</h4>
+                            <p><strong>Account Name:</strong> New Ford CBO</p>
+                            <p><strong>Account No:</strong> 0360185938189</p>
+                            <p>Direct bank transfers are accepted. M-Pesa coming soon.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--maasai-blue); margin-bottom: 25px;">Our Location</h3>
+                    <div class="map-container">
+                        <!-- Google Maps Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.26983431635!2d36.06936795850831!3d-1.2877955665690316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b4f3e3c0a3f%3A0x8d0d0d0d0d0d0d0d!2sLoita%2C%20Kenya!5e0!3m2!1sen!2ske!4v1640000000000!5m2!1sen!2ske" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Our Mission</h3>
+                    <p id="footerMission">To empower Maasai communities through education, economic opportunity, and preservation of cultural heritage while breaking the cycle of poverty.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="#home" style="color: #aaa; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#programs" style="color: #aaa; text-decoration: none;">Programs</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#gallery" style="color: #aaa; text-decoration: none;">Gallery</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#team" style="color: #aaa; text-decoration: none;">Our Team</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#transparency" style="color: #aaa; text-decoration: none;">Transparency</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#volunteer" style="color: #aaa; text-decoration: none;">Volunteer</a></li>
+                        <li><a href="#contact" style="color: #aaa; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <p>Follow our work and see updates from the field:</p>
+                    <div style="display: flex; gap: 15px; margin-top: 15px;">
+                        <a href="https://facebook.com" target="_blank" style="color: white; font-size: 1.5rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/254745956794" target="_blank" style="color: white; font-size: 1.5rem;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:newfordorgnarok@mail.com" style="color: white; font-size: 1.5rem;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear">2024</span> New Ford CBO - Maasai Community Empowerment. All rights reserved. | Designed with ❤️ for the people of Loita</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">
+                    <i class="fas fa-shield-alt"></i> This website uses security measures to protect against fraud and ensure donor safety.
+                </p>
+                <p style="margin-top: 5px; font-size: 0.8rem;">
+                    Registration No: DSD/33/179/02/20645 | Registered: 20th July, 2024 | Narok South, Kenya
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Modals -->
+    <div id="updateTextContent" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('updateTextContent')">&times;</span>
+            <h3><i class="fas fa-edit"></i> Edit Website Text Content</h3>
+            
+            <div class="form-group">
+                <label>Organization Name</label>
+                <input type="text" id="editOrgName" class="form-control" value="New Ford CBO">
+            </div>
+            
+            <div class="form-group">
+                <label>Organization Tagline</label>
+                <input type="text" id="editOrgTagline" class="form-control" value="Maasai Community Empowerment | Loita, Narok South">
+            </div>
+            
+            <div class="form-group">
+                <label>Hero Title</label>
+                <input type="text" id="editHeroTitle" class="form-control" value="Empowering Maasai Communities in Loita">
+            </div>
+            
+            <div class="form-group">
+                <label>Hero Description</label>
+                <textarea id="editHeroDescription" class="form-control" rows="3">We are a community-driven organization working to break the cycle of poverty through education, women's empowerment, and sustainable development in Maasai land.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Vision Statement</label>
+                <textarea id="editVision" class="form-control" rows="3">To create a self-sustaining Maasai community where every individual has access to education, economic opportunities, and cultural preservation, leading to improved quality of life and sustainable development.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Mission Statement</label>
+                <textarea id="editMission" class="form-control" rows="3">To empower the Maasai community of Loita through holistic interventions in education, women's empowerment, infrastructure development, and economic sustainability while preserving our rich cultural heritage.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>About Us Text</label>
+                <textarea id="editAbout" class="form-control" rows="4">New Ford CBO is a grassroots community-based organization founded and led by members of the Maasai community in Loita, Narok South. Registered and operating under Kenyan law, we serve as the last line of defense for our community after the departure of larger NGOs from our region.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Gallery Description</label>
+                <textarea id="editGalleryDescription" class="form-control" rows="3">Explore photos and videos from our community projects, events, and daily life in Loita. These images showcase the impact of our work and the beauty of Maasai culture.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Footer Mission Text</label>
+                <textarea id="editFooterMission" class="form-control" rows="3">To empower Maasai communities through education, economic opportunity, and preservation of cultural heritage while breaking the cycle of poverty.</textarea>
+            </div>
+            
+            <button class="submit-btn" onclick="updateTextContent()">
+                <i class="fas fa-save"></i> Save All Text Changes
+            </button>
+        </div>
+    </div>
+    
+    <div id="uploadMedia" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('uploadMedia')">&times;</span>
+            <h3><i class="fas fa-upload"></i> Upload Media Files</h3>
+            
+            <div class="form-group">
+                <label>Select Media Type</label>
+                <select id="mediaType" class="form-control" onchange="changeMediaType()">
+                    <option value="image">Images (JPG, PNG, GIF)</option>
+                    <option value="video">Videos (MP4, MOV, AVI)</option>
+                    <option value="document">Documents (PDF, DOC, DOCX)</option>
+                    <option value="other">Other Files</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Category</label>
+                <select id="mediaCategory" class="form-control">
+                    <option value="gallery">Media Gallery</option>
+                    <option value="program">Program Images</option>
+                    <option value="team">Team Photos</option>
+                    <option value="event">Event Photos</option>
+                    <option value="project">Project Documentation</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Title/Caption</label>
+                <input type="text" id="mediaTitle" class="form-control" placeholder="Enter title or caption">
+            </div>
+            
+            <div class="form-group">
+                <label>Description (Optional)</label>
+                <textarea id="mediaDescription" class="form-control" rows="3" placeholder="Enter description"></textarea>
+            </div>
+            
+            <div class="file-input-container" id="fileDropArea" onclick="document.getElementById('mediaFiles').click()">
+                <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--maasai-blue); margin-bottom: 15px;"></i>
+                <h4>Click to select files or drag and drop</h4>
+                <p id="fileTypeInfo">Supports JPG, PNG, GIF (Max 5MB each)</p>
+                <input type="file" id="mediaFiles" multiple style="display: none;" onchange="handleFileSelect(event)">
+            </div>
+            
+            <div id="filePreview" class="file-preview">
+                <!-- File previews will appear here -->
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="publishImmediately" checked>
+                    Publish immediately
+                </label>
+            </div>
+            
+            <button class="submit-btn" onclick="uploadMediaFiles()">
+                <i class="fas fa-upload"></i> Upload Selected Files
+            </button>
+        </div>
+    </div>
+    
+    <div id="manageTeam" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('manageTeam')">&times;</span>
+            <h3><i class="fas fa-users"></i> Manage Team Members</h3>
+            
+            <div style="margin-bottom: 30px;">
+                <h4>Add New Team Member</h4>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="teamMemberName" class="form-control" placeholder="Enter full name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Position/Role</label>
+                    <input type="text" id="teamMemberRole" class="form-control" placeholder="Enter position">
+                </div>
+                
+                <div class="form-group">
+                    <label>Phone Number (Optional)</label>
+                    <input type="text" id="teamMemberPhone" class="form-control" placeholder="Enter phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label>Description/Bio</label>
+                    <textarea id="teamMemberBio" class="form-control" rows="3" placeholder="Enter bio information"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Photo (Optional)</label>
+                    <input type="file" id="teamMemberPhoto" class="form-control" accept="image/*">
+                </div>
+                
+                <button class="submit-btn" onclick="addTeamMember()" style="margin-bottom: 30px;">
+                    <i class="fas fa-user-plus"></i> Add Team Member
+                </button>
+            </div>
+            
+            <div>
+                <h4>Existing Team Members</h4>
+                <div id="teamMembersList" style="max-height: 300px; overflow-y: auto;">
+                    <!-- Team members will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="managePrograms" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('managePrograms')">&times;</span>
+            <h3><i class="fas fa-tasks"></i> Manage Programs</h3>
+            
+            <div style="margin-bottom: 30px;">
+                <h4>Add New Program</h4>
+                <div class="form-group">
+                    <label>Program Name</label>
+                    <input type="text" id="programName" class="form-control" placeholder="Enter program name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="programDescription" class="form-control" rows="3" placeholder="Enter program description"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Funding Needed</label>
+                    <input type="text" id="programFunding" class="form-control" placeholder="e.g., KES 1.5 Million, $2,500 USD">
+                </div>
+                
+                <div class="form-group">
+                    <label>Active Since</label>
+                    <select id="programActiveSince" class="form-control">
+                        <option value="">Select year</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Impact Description</label>
+                    <input type="text" id="programImpact" class="form-control" placeholder="e.g., 150+ children supported annually">
+                </div>
+                
+                <div class="form-group">
+                    <label>Program Icon</label>
+                    <select id="programIcon" class="form-control">
+                        <option value="fa-school">School</option>
+                        <option value="fa-female">Women</option>
+                        <option value="fa-seedling">Environment</option>
+                        <option value="fa-hands-helping">Community</option>
+                        <option value="fa-stethoscope">Health</option>
+                        <option value="fa-water">Water</option>
+                        <option value="fa-home">Housing</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Program Image (Optional)</label>
+                    <input type="file" id="programImage" class="form-control" accept="image/*">
+                </div>
+                
+                <button class="submit-btn" onclick="addProgram()" style="margin-bottom: 30px;">
+                    <i class="fas fa-plus-circle"></i> Add Program
+                </button>
+            </div>
+            
+            <div>
+                <h4>Existing Programs</h4>
+                <div id="programsList" style="max-height: 300px; overflow-y: auto;">
+                    <!-- Programs will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="managePartners" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('managePartners')">&times;</span>
+            <h3><i class="fas fa-handshake"></i> Manage Partners</h3>
+            
+            <div style="margin-bottom: 30px;">
+                <h4>Add New Partner</h4>
+                <div class="form-group">
+                    <label>Partner Name</label>
+                    <input type="text" id="partnerName" class="form-control" placeholder="Enter partner organization name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Logo (Optional)</label>
+                    <input type="file" id="partnerLogo" class="form-control" accept="image/*">
+                </div>
+                
+                <button class="submit-btn" onclick="addPartner()" style="margin-bottom: 30px;">
+                    <i class="fas fa-handshake"></i> Add Partner
+                </button>
+            </div>
+            
+            <div>
+                <h4>Existing Partners</h4>
+                <div id="partnersList" style="max-height: 300px; overflow-y: auto;">
+                    <!-- Partners will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="manageDocuments" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('manageDocuments')">&times;</span>
+            <h3><i class="fas fa-file-alt"></i> Manage Documents</h3>
+            
+            <div style="margin-bottom: 30px;">
+                <h4>Upload New Document</h4>
+                <div class="form-group">
+                    <label>Document Title</label>
+                    <input type="text" id="documentTitle" class="form-control" placeholder="Enter document title">
+                </div>
+                
+                <div class="form-group">
+                    <label>Document Type</label>
+                    <select id="documentType" class="form-control">
+                        <option value="annual-report">Annual Report</option>
+                        <option value="financial-statement">Financial Statement</option>
+                        <option value="governance-policy">Governance Policy</option>
+                        <option value="certification">Certification</option>
+                        <option value="audit-report">Audit Report</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Year/Date</label>
+                    <input type="text" id="documentYear" class="form-control" placeholder="e.g., 2023, Q1 2024">
+                </div>
+                
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="documentDescription" class="form-control" rows="3" placeholder="Brief description of the document"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Upload File</label>
+                    <input type="file" id="documentFile" class="form-control" accept=".pdf,.doc,.docx,.xls,.xlsx">
+                </div>
+                
+                <button class="submit-btn" onclick="uploadDocument()" style="margin-bottom: 30px;">
+                    <i class="fas fa-upload"></i> Upload Document
+                </button>
+            </div>
+            
+            <div>
+                <h4>Existing Documents</h4>
+                <div id="documentsList" style="max-height: 300px; overflow-y: auto;">
+                    <!-- Documents will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="viewVolunteers" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('viewVolunteers')">&times;</span>
+            <h3><i class="fas fa-user-friends"></i> Registered Volunteers</h3>
+            <div id="volunteersList" style="max-height: 400px; overflow-y: auto;">
+                <!-- Volunteers will be listed here -->
+            </div>
+            <div style="margin-top: 20px; text-align: center;">
+                <button class="submit-btn" onclick="exportVolunteers()">
+                    <i class="fas fa-download"></i> Export to CSV
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data storage
+        let websiteData = {
+            // Basic info
+            orgName: "New Ford CBO",
+            orgTagline: "Maasai Community Empowerment | Loita, Narok South",
+            heroTitle: "Empowering Maasai Communities in Loita",
+            heroDescription: "We are a community-driven organization working to break the cycle of poverty through education, women's empowerment, and sustainable development in Maasai land.",
+            vision: "To create a self-sustaining Maasai community where every individual has access to education, economic opportunities, and cultural preservation, leading to improved quality of life and sustainable development.",
+            mission: "To empower the Maasai community of Loita through holistic interventions in education, women's empowerment, infrastructure development, and economic sustainability while preserving our rich cultural heritage.",
+            about: "New Ford CBO is a grassroots community-based organization founded and led by members of the Maasai community in Loita, Narok South. Registered and operating under Kenyan law, we serve as the last line of defense for our community after the departure of larger NGOs from our region.",
+            galleryDescription: "Explore photos and videos from our community projects, events, and daily life in Loita. These images showcase the impact of our work and the beauty of Maasai culture.",
+            footerMission: "To empower Maasai communities through education, economic opportunity, and preservation of cultural heritage while breaking the cycle of poverty.",
+            
+            // Values
+            values: [
+                { id: 1, title: "Community First", description: "Decisions made by and for the community", icon: "fa-hands-helping" },
+                { id: 2, title: "Integrity", description: "Transparent and accountable in all operations", icon: "fa-handshake" },
+                { id: 3, title: "Compassion", description: "Serving with empathy and understanding", icon: "fa-heart" },
+                { id: 4, title: "Sustainability", description: "Creating lasting impact for future generations", icon: "fa-shield-alt" }
+            ],
+            
+            // Stats
+            stats: [
+                { id: 1, number: "90%", label: "Women Illiteracy Rate" },
+                { id: 2, number: "4/16", label: "Girls Reach High School" },
+                { id: 3, number: "80%", label: "Male Unemployment" },
+                { id: 4, number: "7+", label: "Years Serving Community" }
+            ],
+            
+            // Programs
+            programs: [
+                { 
+                    id: 1, 
+                    name: "Education Support Program", 
+                    description: "Providing scholarships, school supplies, and infrastructure development for primary and secondary schools in Loita.",
+                    funding: "KES 1.5 Million Needed",
+                    activeSince: "2018",
+                    impact: "150+ children supported annually",
+                    icon: "fa-school"
+                },
+                { 
+                    id: 2, 
+                    name: "Women's Empowerment", 
+                    description: "Literacy classes, vocational training, and beadwork cooperatives to create economic opportunities for Maasai women.",
+                    funding: "$2,500 USD Needed",
+                    activeSince: "2019",
+                    impact: "80+ women trained annually",
+                    icon: "fa-female"
+                },
+                { 
+                    id: 3, 
+                    name: "Environmental Conservation", 
+                    description: "Tree planting, water harvesting, and sustainable land management practices to combat drought and desertification.",
+                    funding: "KES 1.2 Million Needed",
+                    activeSince: "2020",
+                    impact: "5,000+ trees planted",
+                    icon: "fa-seedling"
+                }
+            ],
+            
+            // Team - UPDATED WITH CORRECTED NAMES
+            team: [
+                { id: 1, name: "Daniel Nkai", role: "Chairperson", phone: "+254-745956794", bio: "Providing strategic leadership and governance oversight" },
+                { id: 2, name: "Solomon", role: "Secretary General", phone: "", bio: "Oversees administrative operations and documentation" },
+                { id: 3, name: "Samuel Lekiranyi", role: "Program Coordinator", phone: "", bio: "Coordinates all field programs and community activities" },
+                { id: 4, name: "Musa Tikili", role: "Finance & Administration Officer", phone: "", bio: "Manages financial operations and administrative functions" },
+                { id: 5, name: "Gladys Manangoi", role: "Project Officer", phone: "", bio: "Implements and monitors community projects" },
+                { id: 6, name: "Shadrack Reson", role: "Monitoring & Evaluation Officer", phone: "", bio: "Tracks program impact and ensures effectiveness" },
+                { id: 7, name: "Patiat Rihard Otumoi", role: "Committee Member", phone: "", bio: "Provides community representation and program oversight" },
+                { id: 8, name: "Rose Nadupoi Kinayio", role: "Treasurer", phone: "", bio: "Manages financial resources and ensures fiscal responsibility" }
+            ],
+            
+            // Partners
+            partners: [
+                { id: 1, name: "Mazingira na Africa Jamii" },
+                { id: 2, name: "PANAI" },
+                { id: 3, name: "YANK" }
+            ],
+            
+            // Documents
+            documents: [
+                { id: 1, title: "Annual Report 2023", type: "annual-report", year: "2023", description: "Complete financial and program report for the year 2023", file: "annual-report-2023.pdf" },
+                { id: 2, title: "Governance Policies", type: "governance-policy", year: "2024", description: "Our organizational policies and governance framework", file: "governance-policies.pdf" }
+            ],
+            
+            // Media gallery
+            media: [],
+            
+            // Donation options
+            donations: [
+                { id: 1, amount: "$100", description: "Provides a full year of sanitary pads for one girl" },
+                { id: 2, amount: "$560", description: "Covers school fees, uniform & books for one child" },
+                { id: 3, amount: "$2,000", description: "Funds literacy classes & business kit for a mother" },
+                { id: 4, amount: "Other", description: "Choose your own amount to support our work" }
+            ],
+            
+            // Volunteers
+            volunteers: []
+        };
+
+        // File storage tracking
+        let fileStorage = {
+            images: [],
+            videos: [],
+            documents: [],
+            other: []
+        };
+
+        // Initialize website
+        function initWebsite() {
+            // Load data from localStorage
+            const savedData = localStorage.getItem('newford_website_data');
+            if (savedData) {
+                websiteData = JSON.parse(savedData);
+            }
+            
+            // Load file storage
+            const savedStorage = localStorage.getItem('newford_file_storage');
+            if (savedStorage) {
+                fileStorage = JSON.parse(savedStorage);
+            }
+            
+            // Update current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Render all content
+            renderAllContent();
+            updateStorageDisplay();
+        }
+
+        // Render all content
+        function renderAllContent() {
+            // Basic info
+            document.getElementById('orgName').textContent = websiteData.orgName;
+            document.getElementById('orgTagline').textContent = websiteData.orgTagline;
+            document.getElementById('heroTitle').textContent = websiteData.heroTitle;
+            document.getElementById('heroDescription').textContent = websiteData.heroDescription;
+            document.getElementById('visionText').textContent = websiteData.vision;
+            document.getElementById('missionText').textContent = websiteData.mission;
+            document.getElementById('aboutText').textContent = websiteData.about;
+            document.getElementById('galleryDescription').innerHTML = `<p>${websiteData.galleryDescription}</p>`;
+            document.getElementById('footerMission').textContent = websiteData.footerMission;
+            
+            // Values
+            renderValues();
+            
+            // Stats
+            renderStats();
+            
+            // Programs
+            renderPrograms();
+            
+            // Team
+            renderTeam();
+            
+            // Partners
+            renderPartners();
+            
+            // Documents
+            renderDocuments();
+            
+            // Media gallery
+            renderMediaGallery();
+            
+            // Donations
+            renderDonations();
+        }
+
+        // Render values
+        function renderValues() {
+            const container = document.getElementById('valuesContainer');
+            container.innerHTML = '';
+            
+            websiteData.values.forEach(value => {
+                const valueItem = document.createElement('div');
+                valueItem.className = 'value-item';
+                valueItem.innerHTML = `
+                    <div class="value-icon">
+                        <i class="fas ${value.icon}"></i>
+                    </div>
+                    <h4>${value.title}</h4>
+                    <p>${value.description}</p>
+                `;
+                container.appendChild(valueItem);
+            });
+        }
+
+        // Render stats
+        function renderStats() {
+            const container = document.getElementById('statsContainer');
+            container.innerHTML = '';
+            
+            websiteData.stats.forEach(stat => {
+                const statItem = document.createElement('div');
+                statItem.className = 'stat-item';
+                statItem.innerHTML = `
+                    <span class="stat-number">${stat.number}</span>
+                    <span class="stat-label">${stat.label}</span>
+                `;
+                container.appendChild(statItem);
+            });
+        }
+
+        // Render programs
+        function renderPrograms() {
+            const container = document.getElementById('programsContainer');
+            container.innerHTML = '';
+            
+            websiteData.programs.forEach(program => {
+                const programCard = document.createElement('div');
+                programCard.className = 'program-card';
+                programCard.innerHTML = `
+                    <div class="program-img">
+                        <div style="background: #e6f7ff; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas ${program.icon}" style="font-size: 4rem; color: var(--maasai-blue);"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>${program.name}</h3>
+                        <p>${program.description}</p>
+                        <div class="program-details">
+                            <div class="program-cost">${program.funding}</div>
+                            <div class="program-active">
+                                <select class="active-since" onchange="updateProgramYear(${program.id}, this.value)">
+                                    <option>Active Since: ${program.activeSince}</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p><strong>Impact:</strong> ${program.impact}</p>
+                    </div>
+                `;
+                container.appendChild(programCard);
+            });
+        }
+
+        // Render team - UPDATED WITH CORRECTED NAMES
+        function renderTeam() {
+            const container = document.getElementById('teamContainer');
+            container.innerHTML = '';
+            
+            websiteData.team.forEach(member => {
+                const teamMember = document.createElement('div');
+                teamMember.className = 'team-member';
+                teamMember.innerHTML = `
+                    <div class="member-photo">
+                        <div style="background: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user-tie" style="font-size: 4rem; color: var(--maasai-blue);"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>${member.name}</h4>
+                        <p class="member-role">${member.role}</p>
+                        ${member.phone ? `<p>${member.phone}</p>` : ''}
+                        <p>${member.bio}</p>
+                    </div>
+                `;
+                container.appendChild(teamMember);
+            });
+        }
+
+        // Render partners
+        function renderPartners() {
+            const container = document.getElementById('partnersContainer');
+            container.innerHTML = '';
+            
+            websiteData.partners.forEach(partner => {
+                const partnerLogo = document.createElement('div');
+                partnerLogo.className = 'partner-logo';
+                partnerLogo.innerHTML = `
+                    <div style="text-align: center; width: 100%;">
+                        <div style="font-weight: bold; color: var(--maasai-green); font-size: 1.2rem;">${partner.name}</div>
+                    </div>
+                `;
+                container.appendChild(partnerLogo);
+            });
+        }
+
+        // Render documents
+        function renderDocuments() {
+            const container = document.getElementById('documentsContainer');
+            container.innerHTML = '';
+            
+            websiteData.documents.forEach(doc => {
+                const docCard = document.createElement('div');
+                docCard.className = 'document-card';
+                docCard.innerHTML = `
+                    <div class="doc-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>${doc.title}</h4>
+                    <p>${doc.description}</p>
+                    <div class="doc-actions">
+                        <button class="donate-btn" onclick="downloadFile('${doc.file}')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                        <button class="donate-btn" style="background: var(--maasai-blue);" onclick="viewDocument(${doc.id})">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                    </div>
+                `;
+                container.appendChild(docCard);
+            });
+        }
+
+        // Render media gallery (WITHOUT individual captions)
+        function renderMediaGallery() {
+            const container = document.getElementById('galleryContainer');
+            container.innerHTML = '';
+            
+            // Show gallery items from file storage
+            const allMedia = [...fileStorage.images, ...fileStorage.videos, ...fileStorage.documents, ...fileStorage.other];
+            
+            if (allMedia.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666; padding: 40px;">No media files uploaded yet. Admin can upload files using the admin panel.</p>';
+                return;
+            }
+            
+            allMedia.forEach(media => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                
+                let mediaContent = '';
+                if (media.type.startsWith('image/')) {
+                    mediaContent = `<img src="${media.url}" alt="${media.name}" title="${media.description || media.name}">`;
+                } else if (media.type.startsWith('video/')) {
+                    mediaContent = `<video controls><source src="${media.url}" type="${media.type}"></video>`;
+                } else {
+                    const icon = getFileIcon(media.type);
+                    mediaContent = `<div class="file-icon"><i class="${icon}" style="font-size: 4rem; color: var(--maasai-blue);"></i></div>`;
+                }
+                
+                // Only show media content, no captions
+                galleryItem.innerHTML = mediaContent;
+                container.appendChild(galleryItem);
+            });
+        }
+
+        // Render donations
+        function renderDonations() {
+            const container = document.getElementById('donationsContainer');
+            container.innerHTML = '';
+            
+            websiteData.donations.forEach(donation => {
+                const donationOption = document.createElement('div');
+                donationOption.className = 'donation-option';
+                donationOption.innerHTML = `
+                    <div class="donation-amount">${donation.amount}</div>
+                    <div class="donation-desc">${donation.description}</div>
+                    <button class="donate-btn" data-amount="${donation.amount === 'Other' ? 'custom' : donation.amount.replace('$', '')}">Donate Now</button>
+                `;
+                container.appendChild(donationOption);
+            });
+            
+            // Reattach event listeners
+            document.querySelectorAll('.donate-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const amount = this.getAttribute('data-amount');
+                    if (amount === 'custom') {
+                        document.getElementById('donationAmount').value = '';
+                    } else {
+                        document.getElementById('donationAmount').value = amount;
+                    }
+                    openModal('donationModal');
+                });
+            });
+        }
+
+        // Update program year
+        function updateProgramYear(programId, year) {
+            const program = websiteData.programs.find(p => p.id === programId);
+            if (program) {
+                program.activeSince = year;
+                saveData();
+            }
+        }
+
+        // Update text content
+        function updateTextContent() {
+            websiteData.orgName = document.getElementById('editOrgName').value;
+            websiteData.orgTagline = document.getElementById('editOrgTagline').value;
+            websiteData.heroTitle = document.getElementById('editHeroTitle').value;
+            websiteData.heroDescription = document.getElementById('editHeroDescription').value;
+            websiteData.vision = document.getElementById('editVision').value;
+            websiteData.mission = document.getElementById('editMission').value;
+            websiteData.about = document.getElementById('editAbout').value;
+            websiteData.galleryDescription = document.getElementById('editGalleryDescription').value;
+            websiteData.footerMission = document.getElementById('editFooterMission').value;
+            
+            saveData();
+            renderAllContent();
+            alert('Text content updated successfully!');
+            closeModal('updateTextContent');
+        }
+
+        // Change media type
+        function changeMediaType() {
+            const type = document.getElementById('mediaType').value;
+            const fileTypeInfo = document.getElementById('fileTypeInfo');
+            
+            switch(type) {
+                case 'image':
+                    fileTypeInfo.textContent = 'Supports JPG, PNG, GIF (Max 5MB each)';
+                    break;
+                case 'video':
+                    fileTypeInfo.textContent = 'Supports MP4, MOV, AVI (Max 20MB each)';
+                    break;
+                case 'document':
+                    fileTypeInfo.textContent = 'Supports PDF, DOC, DOCX, XLS, XLSX (Max 10MB each)';
+                    break;
+                default:
+                    fileTypeInfo.textContent = 'Supports all file types (Max 10MB each)';
+            }
+        }
+
+        // Handle file select
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            const preview = document.getElementById('filePreview');
+            preview.innerHTML = '';
+            
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const previewItem = document.createElement('div');
+                    previewItem.className = 'file-preview-item';
+                    
+                    let previewContent = '';
+                    if (file.type.startsWith('image/')) {
+                        previewContent = `<img src="${e.target.result}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">`;
+                    } else {
+                        const icon = getFileIcon(file.type);
+                        previewContent = `<i class="${icon}" style="font-size: 2rem; color: var(--maasai-blue);"></i>`;
+                    }
+                    
+                    previewItem.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            ${previewContent}
+                            <div>
+                                <div><strong>${file.name}</strong></div>
+                                <div style="font-size: 0.8rem; color: #666;">${formatFileSize(file.size)}</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.8rem; color: #666;">${file.type}</div>
+                    `;
+                    preview.appendChild(previewItem);
+                };
+                
+                reader.readAsDataURL(file);
+            }
+            
+            if (files.length > 0) {
+                preview.classList.add('show');
+            }
+        }
+
+        // Upload media files
+        function uploadMediaFiles() {
+            const files = document.getElementById('mediaFiles').files;
+            const type = document.getElementById('mediaType').value;
+            const category = document.getElementById('mediaCategory').value;
+            const title = document.getElementById('mediaTitle').value;
+            const description = document.getElementById('mediaDescription').value;
+            
+            if (files.length === 0) {
+                alert('Please select files to upload.');
+                return;
+            }
+            
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const mediaItem = {
+                        id: Date.now() + i,
+                        name: title || file.name,
+                        type: file.type,
+                        size: file.size,
+                        url: e.target.result,
+                        category: category,
+                        description: description,
+                        uploaded: new Date().toISOString()
+                    };
+                    
+                    // Store based on file type
+                    if (file.type.startsWith('image/')) {
+                        fileStorage.images.push(mediaItem);
+                    } else if (file.type.startsWith('video/')) {
+                        fileStorage.videos.push(mediaItem);
+                    } else if (file.type.includes('pdf') || file.type.includes('document') || file.type.includes('msword')) {
+                        fileStorage.documents.push(mediaItem);
+                    } else {
+                        fileStorage.other.push(mediaItem);
+                    }
+                    
+                    // Save and update display
+                    saveFileStorage();
+                    updateStorageDisplay();
+                    
+                    if (i === files.length - 1) {
+                        alert(`${files.length} file(s) uploaded successfully!`);
+                        closeModal('uploadMedia');
+                        renderMediaGallery();
+                    }
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Add team member
+        function addTeamMember() {
+            const name = document.getElementById('teamMemberName').value;
+            const role = document.getElementById('teamMemberRole').value;
+            const phone = document.getElementById('teamMemberPhone').value;
+            const bio = document.getElementById('teamMemberBio').value;
+            
+            if (!name || !role) {
+                alert('Please fill in name and role.');
+                return;
+            }
+            
+            const newMember = {
+                id: Date.now(),
+                name: name,
+                role: role,
+                phone: phone,
+                bio: bio
+            };
+            
+            websiteData.team.push(newMember);
+            saveData();
+            renderTeam();
+            
+            // Clear form
+            document.getElementById('teamMemberName').value = '';
+            document.getElementById('teamMemberRole').value = '';
+            document.getElementById('teamMemberPhone').value = '';
+            document.getElementById('teamMemberBio').value = '';
+            
+            alert('Team member added successfully!');
+        }
+
+        // Add program
+        function addProgram() {
+            const name = document.getElementById('programName').value;
+            const description = document.getElementById('programDescription').value;
+            const funding = document.getElementById('programFunding').value;
+            const activeSince = document.getElementById('programActiveSince').value;
+            const impact = document.getElementById('programImpact').value;
+            const icon = document.getElementById('programIcon').value;
+            
+            if (!name || !description) {
+                alert('Please fill in name and description.');
+                return;
+            }
+            
+            const newProgram = {
+                id: Date.now(),
+                name: name,
+                description: description,
+                funding: funding,
+                activeSince: activeSince,
+                impact: impact,
+                icon: icon
+            };
+            
+            websiteData.programs.push(newProgram);
+            saveData();
+            renderPrograms();
+            
+            // Clear form
+            document.getElementById('programName').value = '';
+            document.getElementById('programDescription').value = '';
+            document.getElementById('programFunding').value = '';
+            document.getElementById('programImpact').value = '';
+            
+            alert('Program added successfully!');
+        }
+
+        // Add partner
+        function addPartner() {
+            const name = document.getElementById('partnerName').value;
+            
+            if (!name) {
+                alert('Please enter partner name.');
+                return;
+            }
+            
+            const newPartner = {
+                id: Date.now(),
+                name: name
+            };
+            
+            websiteData.partners.push(newPartner);
+            saveData();
+            renderPartners();
+            
+            // Clear form
+            document.getElementById('partnerName').value = '';
+            
+            alert('Partner added successfully!');
+        }
+
+        // Upload document
+        function uploadDocument() {
+            const title = document.getElementById('documentTitle').value;
+            const type = document.getElementById('documentType').value;
+            const year = document.getElementById('documentYear').value;
+            const description = document.getElementById('documentDescription').value;
+            const fileInput = document.getElementById('documentFile');
+            
+            if (!title || !fileInput.files.length) {
+                alert("Please provide a title and select a file.");
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const newDoc = {
+                    id: Date.now(),
+                    title: title,
+                    type: type,
+                    year: year,
+                    description: description,
+                    file: file.name,
+                    url: e.target.result,
+                    size: file.size,
+                    uploaded: new Date().toISOString()
+                };
+                
+                websiteData.documents.push(newDoc);
+                
+                // Also add to file storage
+                fileStorage.documents.push({
+                    id: Date.now(),
+                    name: file.name,
+                    type: file.type,
+                    size: file.size,
+                    url: e.target.result,
+                    category: 'document',
+                    description: description,
+                    uploaded: new Date().toISOString()
+                });
+                
+                saveData();
+                saveFileStorage();
+                renderDocuments();
+                updateStorageDisplay();
+                
+                alert(`Document "${title}" uploaded successfully!`);
+                closeModal('manageDocuments');
+                
+                // Clear form
+                document.getElementById('documentTitle').value = '';
+                document.getElementById('documentYear').value = '';
+                document.getElementById('documentDescription').value = '';
+                document.getElementById('documentFile').value = '';
+            };
+            
+            reader.readAsDataURL(file);
+        }
+
+        // Update storage display
+        function updateStorageDisplay() {
+            const totalStorage = 50 * 1024 * 1024; // 50MB in bytes
+            let usedStorage = 0;
+            
+            // Calculate used storage
+            const allFiles = [...fileStorage.images, ...fileStorage.videos, ...fileStorage.documents, ...fileStorage.other];
+            allFiles.forEach(file => {
+                usedStorage += file.size;
+            });
+            
+            // Update counts
+            document.getElementById('imageCount').textContent = fileStorage.images.length;
+            document.getElementById('videoCount').textContent = fileStorage.videos.length;
+            document.getElementById('docCount').textContent = fileStorage.documents.length;
+            document.getElementById('otherCount').textContent = fileStorage.other.length;
+            
+            // Update sizes
+            document.getElementById('imageSize').textContent = formatFileSize(fileStorage.images.reduce((sum, img) => sum + img.size, 0));
+            document.getElementById('videoSize').textContent = formatFileSize(fileStorage.videos.reduce((sum, vid) => sum + vid.size, 0));
+            document.getElementById('docSize').textContent = formatFileSize(fileStorage.documents.reduce((sum, doc) => sum + doc.size, 0));
+            document.getElementById('otherSize').textContent = formatFileSize(fileStorage.other.reduce((sum, other) => sum + other.size, 0));
+            
+            // Update storage bar
+            const usedPercent = (usedStorage / totalStorage) * 100;
+            document.getElementById('storageBar').style.width = `${usedPercent}%`;
+            document.getElementById('storageUsed').textContent = formatFileSize(usedStorage);
+            document.getElementById('storageTotal').textContent = '50 MB';
+        }
+
+        // Helper functions
+        function getFileIcon(fileType) {
+            if (fileType.startsWith('image/')) return 'fas fa-image';
+            if (fileType.startsWith('video/')) return 'fas fa-video';
+            if (fileType.includes('pdf')) return 'fas fa-file-pdf';
+            if (fileType.includes('document') || fileType.includes('msword')) return 'fas fa-file-word';
+            if (fileType.includes('spreadsheet') || fileType.includes('excel')) return 'fas fa-file-excel';
+            return 'fas fa-file';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function downloadFile(filename) {
+            alert(`Downloading ${filename}...`);
+        }
+
+        function viewDocument(docId) {
+            const doc = websiteData.documents.find(d => d.id === docId);
+            if (doc) {
+                alert(`Viewing: ${doc.title}\n\nThis would open the document viewer in production.`);
+            }
+        }
+
+        // Save data to localStorage
+        function saveData() {
+            localStorage.setItem('newford_website_data', JSON.stringify(websiteData));
+        }
+
+        // Save file storage to localStorage
+        function saveFileStorage() {
+            localStorage.setItem('newford_file_storage', JSON.stringify(fileStorage));
+        }
+
+        // Navigation highlighting
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                document.querySelectorAll('nav a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Admin access
+        document.getElementById('adminAccessBtn').addEventListener('click', function() {
+            const password = prompt("Enter admin password:");
+            if (password === "NewFord2023") {
+                document.getElementById('adminPanel').style.display = 'block';
+                alert("Admin access granted. You can now manage all content.");
+            } else {
+                alert("Incorrect password. Access denied.");
+            }
+        });
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize on load
+        window.onload = function() {
+            console.log("New Ford CBO Website CMS Loaded");
+            console.log("All content is editable through the Admin Panel");
+            console.log("Password: NewFord2023");
+            
+            initWebsite();
+            
+            // Set up drag and drop
+            const fileDropArea = document.getElementById('fileDropArea');
+            if (fileDropArea) {
+                ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                    fileDropArea.addEventListener(eventName, preventDefaults, false);
+                });
+                
+                function preventDefaults(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                
+                ['dragenter', 'dragover'].forEach(eventName => {
+                    fileDropArea.addEventListener(eventName, highlight, false);
+                });
+                
+                ['dragleave', 'drop'].forEach(eventName => {
+                    fileDropArea.addEventListener(eventName, unhighlight, false);
+                });
+                
+                function highlight() {
+                    fileDropArea.classList.add('drag-over');
+                }
+                
+                function unhighlight() {
+                    fileDropArea.classList.remove('drag-over');
+                }
+                
+                fileDropArea.addEventListener('drop', handleDrop, false);
+                
+                function handleDrop(e) {
+                    const dt = e.dataTransfer;
+                    const files = dt.files;
+                    document.getElementById('mediaFiles').files = files;
+                    handleFileSelect({ target: { files: files } });
+                }
+            }
+        }
+    </script>
+</body>
+</html>
